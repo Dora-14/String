@@ -4,15 +4,17 @@ using namespace std;
 
 int main()
 {
-    string str = "bARAck";
-    transform(str.begin(), str.end(), str.begin(), ::tolower);
-    cout << str << endl;
+    string s, milyen;
+    cout << "Kerem a szot";
+    cin >> s;
+    cout << "Kicsi/Nagy";
+    cin >> milyen;
+    if(milyen=="Nagy"){
+        transform(s.begin(), s.end(), s.begin(), ::toupper);
+    }else{
+        transform(s.begin(), s.end(), s.begin(), ::tolower);
 
-    int pos = 'A' - 'a';
-    for(int i=0; i < str.size(); i++){
-        str[i] += pos;
     }
-    cout << str << endl;
-
+    cout << s << endl;
     return 0;
 }
